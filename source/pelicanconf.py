@@ -62,3 +62,27 @@ BOOTSTRAP_THEME = 'flatly'
 
 #Change the style of the code blocks
 PYGMENTS_STYLE = 'monokai'
+
+# we must tell Pelican where to look for the static media files 
+STATIC_PATHS = ['img', 'pdf']
+
+
+# We have the option to define where Pelican should look for our blog's pages. 
+# By default Pelican expects them to be in the content/pages folder. 
+# It is not necessary to state the path but it is a good practice to do so. 
+PAGE_PATHS = ['pages']
+
+#To change the URL to show the content type and date as well. 
+# The ARTICLE_URL variable states what should display in the web browser's address bar 
+# while the ARTICLE_SAVE_AS variable defines where the article being generated should be output to.
+ARTICLE_URL = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+
+
+#For pages, categories, and tags. 
+PAGE_URL = 'pages/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+CATEGORY_URL = 'category/{slug}'
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+TAG_URL = 'tag/{slug}'
+TAG_SAVE_AS = 'tag/{slug}/index.html'
